@@ -1,0 +1,15 @@
+{% extends 'rsvpapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>RSVP</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'confirmation' %}" method="post">
+{% csrf_token %}
+{{ form|crispy }}
+<input type="submit" value="Submit" class="btn btn-primary">
+</form>
+{% endblock %}
