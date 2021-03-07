@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import GuestResponse
 from .forms import GuestResponseForm
@@ -13,7 +13,8 @@ def confirmation(request):
         form = GuestResponseForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'rsvpapp/confirm.html')
+            return redirect('https://jonathanlovesshonnetta.com/rsvp/confirmed/')
+            #return render(request, 'rsvpapp/confirm.html')
     else:
         context = {
             'form': GuestResponseForm,

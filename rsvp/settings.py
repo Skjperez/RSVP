@@ -25,7 +25,7 @@ SECRET_KEY = '2^@&b#i6z+uf!o291+kqgd^1@m@su8w(zy@34jgr#8b61nhu2c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Shonnettas-MacBook-Pro.local','127.0.0.1']
 
 
 # Application definition
